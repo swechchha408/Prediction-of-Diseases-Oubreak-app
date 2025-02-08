@@ -12,21 +12,6 @@ diabetes_model_path = 'D:\PREDICTIONS\saved_models\diabetes_logistic_model.sav'
 heart_model_path = 'D:\PREDICTIONS\saved_models\heart_logistic_model.sav'
 parkinson_model_path = 'D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav'
 
-# Check if files exist and load models
-if os.path.exists(diabetes_model_path):
-    diabetes_model = pickle.load(open(diabetes_model_path, 'rb'))
-else:
-    st.error(f"File not found: {diabetes_model_path}")
-
-if os.path.exists(heart_model_path):
-    heart_model = pickle.load(open(heart_model_path, 'rb'))
-else:
-    st.error(f"File not found: {heart_model_path}")
-
-if os.path.exists(parkinson_model_path):
-    parkinson_model = pickle.load(open(parkinson_model_path, 'rb'))
-else:
-    st.error(f"File not found: {parkinson_model_path}")
 
 with st.sidebar:
     selected = option_menu('Prediction of disease outbreak system',
