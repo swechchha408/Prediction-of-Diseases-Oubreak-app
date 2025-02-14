@@ -1,7 +1,7 @@
 # Prediction-of-Diseases-Oubreak-app
 This project is a machine learning-based disease prediction system that helps in detecting Diabetes, Heart Disease, and Parkinson’s Disease. It provides a user-friendly web interface built using Streamlit and employs pre-trained models for accurate predictions.
 ## Features 🌟
-✔️ Diabetes Prediction using patient health metrics
+✔️ [Diabetes Prediction using patient health metrics]
 ✔️ Heart Disease Prediction based on cardiovascular parameters
 ✔️ Parkinson's Disease Prediction using voice-related attributes
 ✔️ Interactive Web Interface with user input fields
