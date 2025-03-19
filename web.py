@@ -28,9 +28,9 @@ with open(heart_model_path, 'rb') as file:
     heart_model = pickle.load(file)
 
 with open(parkinson_model_path, 'rb') as file:
-    parkinson_model = pickle.load(file)/diabetes_logistic_model.sav'
-heart_model_path = './heart_logistic_model.sav'
-parkinson_model_path = './parkinsons_decision_tree_model.sav'
+parkinson_model = 'pickle.load(file)/diabetes_logistic_model.sav'
+heart_model_path = 'pickle.load(file)/heart_logistic_model.sav'
+parkinson_model_path = 'pickle.load(file)/parkinsons_decision_tree_model.sav'
 
 # Check if files exist
 if not os.path.exists(diabetes_model_path):
