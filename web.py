@@ -2,15 +2,17 @@ import os  # interact with the file system and using it to determine the directo
 import pickle  # pre-trained models loading
 import streamlit as st  # web application
 from streamlit_option_menu import option_menu  # creates stylish sidebar menu
+if not os.path.exists(diabetes_model_path):
+    st.error(f"Model file not found: {diabetes_model_path}")
 
 st.set_page_config(page_title='Prediction of Disease Outbreak',
                    layout='wide',
                    page_icon='🩺')
 
 # Define file paths
-diabetes_model_path = 'D:\PREDICTIONS\saved_models\diabetes_logistic_model.sav'
-heart_model_path = 'D:\PREDICTIONS\saved_models\heart_logistic_model.sav'
-parkinson_model_path = 'D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav'
+diabetes_model_path = './diabetes_logistic_model.sav'
+heart_model_path = './heart_logistic_model.sav'
+parkinson_model_path = './parkinsons_decision_tree_model.sav'
 
 # Load models
 with open(diabetes_model_path, 'rb') as file:
