@@ -8,16 +8,6 @@ st.set_page_config(page_title='Prediction of Disease Outbreak',
                    page_icon='🩺')
 
 # Define file paths
-diabetes_model_path = 'import os  # interact with the file system and using it to determine the directory of code
-import pickle  # pre-trained models loading
-import streamlit as st  # web application
-from streamlit_option_menu import option_menu  # creates stylish sidebar menu
-
-st.set_page_config(page_title='Prediction of Disease Outbreak',
-                   layout='wide',
-                   page_icon='🩺')
-
-# Define file paths
 diabetes_model_path = 'training_modules/diabetes_logistic_model.sav'
 heart_model_path = 'training modules/heart_logistic_model.sav'
 parkinson_model_path = 'training_modules/parkinsons_decision_tree_model.sav'
