@@ -21,6 +21,7 @@ if not os.path.exists(parkinson_model_path):
     st.error(f"Model file not found: {parkinson_model_path}")
 
 # Load models
+# Load models
 with open(diabetes_model_path, 'rb') as file:
     diabetes_model = pickle.load(file)
 
@@ -28,6 +29,8 @@ with open(heart_model_path, 'rb') as file:
     heart_model = pickle.load(file)
 
 with open(parkinson_model_path, 'rb') as file:
+    parkinson_model = pickle.load(file)
+  
 parkinson_model = 'pickle.load(training_modules)/diabetes_logistic_model.sav'
 heart_model_path = 'pickle.load(training_modules)/heart_logistic_model.sav'
 parkinson_model_path = 'pickle.load(training_modules)/parkinsons_decision_tree_model.sav'
