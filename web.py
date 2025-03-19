@@ -2,8 +2,16 @@ import os  # interact with the file system and using it to determine the directo
 import pickle  # pre-trained models loading
 import streamlit as st  # web application
 from streamlit_option_menu import option_menu  # creates stylish sidebar menu
-if not os.path.exists(diabetes_model_path):
-    st.error(f"Model file not found: {diabetes_model_path}")
+
+st.set_page_config(page_title='Prediction of Disease Outbreak',
+                   layout='wide',
+                   page_icon='🩺')
+
+# Define file paths
+diabetes_model_path = 'import os  # interact with the file system and using it to determine the directory of code
+import pickle  # pre-trained models loading
+import streamlit as st  # web application
+from streamlit_option_menu import option_menu  # creates stylish sidebar menu
 
 st.set_page_config(page_title='Prediction of Disease Outbreak',
                    layout='wide',
@@ -11,8 +19,37 @@ st.set_page_config(page_title='Prediction of Disease Outbreak',
 
 # Define file paths
 diabetes_model_path = 'training_modules/diabetes_logistic_model.sav'
-heart_model_path = 'training_modules/heart_logistic_model.sav'
+heart_model_path = 'training modules/heart_logistic_model.sav'
 parkinson_model_path = 'training_modules/parkinsons_decision_tree_model.sav'
+
+# Check if files exist
+if not os.path.exists(diabetes_model_path):
+    st.error(f"Model file not found: {diabetes_model_path}")
+if not os.path.exists(heart_model_path):
+    st.error(f"Model file not found: {heart_model_path}")
+if not os.path.exists(parkinson_model_path):
+    st.error(f"Model file not found: {parkinson_model_path}")
+
+# Load models
+with open(diabetes_model_path, 'rb') as file:
+    diabetes_model = pickle.load(file)
+
+with open(heart_model_path, 'rb') as file:
+    heart_model = pickle.load(file)
+
+with open(parkinson_model_path, 'rb') as file:
+    parkinson_model = pickle.load(file)/diabetes_logistic_model.sav'
+heart_model_path = './heart_logistic_model.sav'
+parkinson_model_path = './parkinsons_decision_tree_model.sav'
+
+# Check if files exist
+if not os.path.exists(diabetes_model_path):
+    st.error(f"Model file not found: {diabetes_model_path}")
+if not os.path.exists(heart_model_path):
+    st.error(f"Model file not found: {heart_model_path}")
+if not os.path.exists(parkinson_model_path):
+    st.error(f"Model file not found: {parkinson_model_path}")
+
 # Load models
 with open(diabetes_model_path, 'rb') as file:
     diabetes_model = pickle.load(file)
@@ -22,7 +59,6 @@ with open(heart_model_path, 'rb') as file:
 
 with open(parkinson_model_path, 'rb') as file:
     parkinson_model = pickle.load(file)
-
 
 with st.sidebar:
     selected = option_menu('Prediction of disease outbreak system',
