@@ -8,40 +8,9 @@ st.set_page_config(page_title='Prediction of Disease Outbreak',
                    page_icon='🩺')
 
 # Define file paths
-diabetes_model_path = 'training_modules/diabetes_logistic_model.sav'
-heart_model_path = 'training modules/heart_logistic_model.sav'
-parkinson_model_path = 'training_modules/parkinsons_decision_tree_model.sav'
-
-# Check if files exist
-if not os.path.exists(diabetes_model_path):
-    st.error(f"Model file not found: {diabetes_model_path}")
-if not os.path.exists(heart_model_path):
-    st.error(f"Model file not found: {heart_model_path}")
-if not os.path.exists(parkinson_model_path):
-    st.error(f"Model file not found: {parkinson_model_path}")
-
-# Load models
-# Load models
-with open(diabetes_model_path, 'rb') as file:
-    diabetes_model = pickle.load(file)
-
-with open(heart_model_path, 'rb') as file:
-    heart_model = pickle.load(file)
-
-with open(parkinson_model_path, 'rb') as file:
-    parkinson_model = pickle.load(file)
-  
-parkinson_model = 'pickle.load(training_modules)/diabetes_logistic_model.sav'
-heart_model_path = 'pickle.load(training_modules)/heart_logistic_model.sav'
-parkinson_model_path = 'pickle.load(training_modules)/parkinsons_decision_tree_model.sav'
-
-# Check if files exist
-if not os.path.exists(diabetes_model_path):
-    st.error(f"Model file not found: {diabetes_model_path}")
-if not os.path.exists(heart_model_path):
-    st.error(f"Model file not found: {heart_model_path}")
-if not os.path.exists(parkinson_model_path):
-    st.error(f"Model file not found: {parkinson_model_path}")
+diabetes_model_path = 'D:\PREDICTIONS\saved_models\diabetes_logistic_model.sav'
+heart_model_path = 'D:\PREDICTIONS\saved_models\heart_logistic_model.sav'
+parkinson_model_path = 'D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav'
 
 # Load models
 with open(diabetes_model_path, 'rb') as file:
