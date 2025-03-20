@@ -13,15 +13,6 @@ diabetes_model_path = pickle.load(open(r"D:\PREDICTIONS\training_modules\diabete
 heart_model_path = pickle.load(open(r"D:\PREDICTIONS\saved_models\heart_logistic_model.sav",'rb'))
 parkinson_model_path = pickle.load(open(r"D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav",'rb'))
 
-# Load models
-with open(diabetes_model_path, 'rb') as file:
-    diabetes_model = pickle.load(file)
-
-with open(heart_model_path, 'rb') as file:
-    heart_model = pickle.load(file)
-
-with open(parkinson_model_path, 'rb') as file:
-    parkinson_model = pickle.load(file)
 
 with st.sidebar:
     selected = option_menu('Prediction of disease outbreak system',
