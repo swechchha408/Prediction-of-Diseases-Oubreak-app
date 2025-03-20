@@ -1,4 +1,5 @@
 import os  # interact with the file system and using it to determine the directory of code
+diabetes_model_path = os.path.join(os.getcwd(), 'diabetes_model.pkl')
 import pickle  # pre-trained models loading
 import streamlit as st  # web application
 from streamlit_option_menu import option_menu  # creates stylish sidebar menu
