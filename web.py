@@ -9,9 +9,9 @@ st.set_page_config(page_title='Prediction of Disease Outbreak',
                    page_icon='🩺')
 
 # Define file paths
-diabetes_model_path = 'D:\PREDICTIONS\saved_models\diabetes_logistic_model.sav'
-heart_model_path = 'D:\PREDICTIONS\saved_models\heart_logistic_model.sav'
-parkinson_model_path = 'D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav'
+diabetes_model_path = pickle.load(open(r"D:\PREDICTIONS\training_modules\diabetes_logistic_model.sav",'rb'))
+heart_model_path = pickle.load(open(r"D:\PREDICTIONS\saved_models\heart_logistic_model.sav",'rb'))
+parkinson_model_path = pickle.load(open(r"D:\PREDICTIONS\saved_models\parkinsons_decision_tree_model.sav",'rb'))
 
 # Load models
 with open(diabetes_model_path, 'rb') as file:
